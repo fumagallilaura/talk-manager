@@ -4,7 +4,7 @@ const routes = require('./router.js');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(routes);
+app.use('/talker', routes);
 
 const HTTP_OK_STATUS = 200;
 const PORT = '3000';
