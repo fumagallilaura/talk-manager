@@ -6,4 +6,6 @@ async function getAll() {
     return talkers;
 }
 
-module.exports = getAll;
+module.exports = {
+  getAll,
+};
