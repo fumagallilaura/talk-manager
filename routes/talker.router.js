@@ -6,6 +6,8 @@ const {
   getTalkerById,
   isValidToken,
   isTokenEmpty,
+  isNameValid,
+  isNameEmpty,
 } = require('../middlewares');
 
 const router = express.Router();
@@ -13,6 +15,6 @@ const router = express.Router();
 router
   .get('/', useTryCatch, getAllTalkers)
   .get('/:id(\\d+)', useTryCatch, isTalkerEmpty, getTalkerById)
-  .post('/', isTokenEmpty, isValidToken);
+  .post('/', useTryCatch, isTokenEmpty, isValidToken, isNameEmpty, isNameValid);
 
 module.exports = router;

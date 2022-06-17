@@ -6,6 +6,8 @@ const getTalkerById = require('./getTalkerById');
 const getAllTalkers = require('./getAllTalkers');
 const isTokenEmpty = require('./isTokenEmpty');
 const isValidToken = require('./isTokenValid');
+const isNameValid = require('./isNameValid');
+const isNameEmpty = require('./isNameEmpty');
 
 module.exports = {
   isFieldEmpty,
@@ -16,4 +18,6 @@ module.exports = {
   getAllTalkers,
   isValidToken,
   isTokenEmpty,
+  isNameValid,
+  isNameEmpty,
 };
