@@ -1,6 +1,6 @@
 const { invalidToken } = require('../schemas/talkerValidations');
 
-const isValidToken = (req, res, next) => {
+const isTokenValid = (req, res, next) => {
   const { authorization } = req.headers;
 
   if (authorization.length !== 16) {
@@ -10,4 +10,4 @@ const isValidToken = (req, res, next) => {
   next();
 };
 
-module.exports = isValidToken;
+module.exports = isTokenValid;

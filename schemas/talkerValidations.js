@@ -7,6 +7,8 @@ const errorMessages = {
   invalidToken: 'Token inválido',
   nameIsEmpty: requiredField('name'),
   invalidName: 'O "name" deve ter pelo menos 3 caracteres',
+  invalidAge: 'A pessoa palestrante deve ser maior de idade',
+  ageIsEmpty: requiredField('age'),
 };
 
 const errorObjects = {
@@ -24,6 +26,12 @@ const errorObjects = {
   },
   invalidName: {
     error: { code: httpCodes.BAD_REQUEST, message: errorMessages.invalidName },
+  },
+  ageIsEmpty: {
+    error: { code: httpCodes.BAD_REQUEST, message: errorMessages.ageIsEmpty },
+  },
+  invalidAge: {
+    error: { code: httpCodes.BAD_REQUEST, message: errorMessages.invalidAge },
   },
 };
 
