@@ -1,11 +1,11 @@
+const { BAD_REQUEST } = require('../schemas/httpCodes');
 const { invalidPassword } = require('../schemas/loginValidations');
 
 const isPasswordValid = (req, res, next) => {
   const { password } = req.body;
 
-  const { error } = invalidPassword;
   if (typeof password !== 'string' || password.length < 6) {
-    return res.status(error.code).json(error);
+    return res.status(BAD_REQUEST).json(invalidPassword.error);
   }
 
   next();

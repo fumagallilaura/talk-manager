@@ -1,3 +1,4 @@
+const { NOT_FOUND } = require('../schemas/httpCodes');
 const { noTalkerFound } = require('../schemas/talkerValidations');
 const getTalkerById = require('../service/getTalkerById');
 
@@ -6,7 +7,7 @@ const isTalkerEmpty = async (req, res, next) => {
   const talkerById = await getTalkerById(id);
 
   if (!talkerById) {
-      return res.status(noTalkerFound.error.code).json(noTalkerFound.error);
+      return res.status(NOT_FOUND).json(noTalkerFound.error);
   }
 
   next();
