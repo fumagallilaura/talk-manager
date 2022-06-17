@@ -10,6 +10,8 @@ const errorMessages = {
   invalidAge: 'A pessoa palestrante deve ser maior de idade',
   ageIsEmpty: requiredField('age'),
   invalidTalk: 'O campo "talk" é obrigatório e "watchedAt" e "rate" não podem ser vazios',
+  invalidWatchedAt: 'O campo "watchedAt" deve ter o formato "dd/mm/aaaa"',
+  invalidRate: 'O campo "rate" deve ser um inteiro de 1 à 5',
 };
 
 const errorObjects = {
@@ -36,6 +38,12 @@ const errorObjects = {
   },
   invalidTalk: {
     error: { code: httpCodes.BAD_REQUEST, message: errorMessages.invalidTalk },
+  },
+  invalidRate: {
+    error: { code: httpCodes.UNAUTHORIZED, message: errorMessages.invalidRate },
+  },
+  invalidWatchedAt: {
+    error: { code: httpCodes.UNAUTHORIZED, message: errorMessages.invalidWatchedAt },
   },
 };
 
