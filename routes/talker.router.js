@@ -1,5 +1,5 @@
 const express = require('express');
-const useTryCatch = require('../helpers/useTryCatch.js');
+const useTryCatch = require('../helpers/useTryCatch');
 const {
   isTalkerEmpty,
   getAllTalkers,

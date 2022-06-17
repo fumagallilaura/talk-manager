@@ -1,5 +1,5 @@
-const { noTalkerFound } = require('../schemas/talkerValidations.js');
-const getTalkerById = require('../service/getTalkerById.js');
+const { noTalkerFound } = require('../schemas/talkerValidations');
+const getTalkerById = require('../service/getTalkerById');
 
 const isTalkerEmpty = async (req, res, next) => {
   const { id } = req.params;

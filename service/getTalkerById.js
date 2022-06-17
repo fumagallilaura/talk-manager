@@ -1,4 +1,4 @@
-const getAllTalkersModel = require('../repository/getAllTalkers.js');
+const getAllTalkersModel = require('../repository/getAllTalkers');
 
 const getTalkerById = async (id) => {
   const talkers = await getAllTalkersModel();

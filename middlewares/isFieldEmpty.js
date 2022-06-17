@@ -1,4 +1,4 @@
-const requiredField = require('../helpers/requiredField.js');
+const requiredField = require('../helpers/requiredField');
 
 const validateFields = (fields) => (req, res, next) => {
   for (let fieldIndex = 0; fieldIndex < fields.length; fieldIndex += 1) {

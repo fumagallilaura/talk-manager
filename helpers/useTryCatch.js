@@ -1,4 +1,4 @@
-const { INTERNAL_SERVER_ERROR } = require('../schemas/httpCodes.js');
+const { INTERNAL_SERVER_ERROR } = require('../schemas/httpCodes');
 
 const useTryCatch = (_req, res, next) => {
   try {

@@ -1,4 +1,4 @@
-const { invalidPassword } = require('../schemas/loginValidations.js');
+const { invalidPassword } = require('../schemas/loginValidations');
 
 const isPasswordValid = (req, res, next) => {
   const { password } = req.body;

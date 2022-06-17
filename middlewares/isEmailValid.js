@@ -1,4 +1,4 @@
-const { invalidEmail } = require('../schemas/loginValidations.js');
+const { invalidEmail } = require('../schemas/loginValidations');
 
 const isEmailValid = (req, res, next) => {
   const { email } = req.body;

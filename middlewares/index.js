@@ -1,10 +1,10 @@
-const isFieldEmpty = require('./isFieldEmpty.js');
-const isValidEmail = require('./isValidEmail.js');
-const isValidPassword = require('./isValidPassword.js');
-const isTalkerEmpty = require('./isTalkerEmpty.js');
-const getTalkerById = require('./getTalkerById.js');
-const getAllTalkers = require('./getAllTalkers.js');
-const isValidToken = require('./isValidToken.js');
+const isFieldEmpty = require('./isFieldEmpty');
+const isValidEmail = require('./isEmailValid');
+const isValidPassword = require('./isPasswordValid');
+const isTalkerEmpty = require('./isTalkerEmpty');
+const getTalkerById = require('./getTalkerById');
+const getAllTalkers = require('./getAllTalkers');
+const isValidToken = require('./isTokenValid');
 
 module.exports = {
   isFieldEmpty,
