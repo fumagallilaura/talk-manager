@@ -1,4 +1,5 @@
 const express = require('express');
+const useTryCatch = require('../helpers/useTryCatch.js');
 const {
   getAllTalkers,
   getTalkerById,
@@ -7,7 +8,7 @@ const {
 const router = express.Router();
 
 router
-  .get('/', getAllTalkers)
+  .get('/', useTryCatch, getAllTalkers)
   .get('/:id(\\d+)', getTalkerById);
 
 module.exports = router;
