@@ -9,6 +9,7 @@ const errorMessages = {
   invalidName: 'O "name" deve ter pelo menos 3 caracteres',
   invalidAge: 'A pessoa palestrante deve ser maior de idade',
   ageIsEmpty: requiredField('age'),
+  invalidTalk: 'O campo "talk" é obrigatório e "watchedAt" e "rate" não podem ser vazios',
 };
 
 const errorObjects = {
@@ -32,6 +33,9 @@ const errorObjects = {
   },
   invalidAge: {
     error: { code: httpCodes.BAD_REQUEST, message: errorMessages.invalidAge },
+  },
+  invalidTalk: {
+    error: { code: httpCodes.BAD_REQUEST, message: errorMessages.invalidTalk },
   },
 };
 

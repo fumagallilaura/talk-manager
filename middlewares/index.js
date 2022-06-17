@@ -10,6 +10,7 @@ const isNameValid = require('./isNameValid');
 const isNameEmpty = require('./isNameEmpty');
 const isAgeEmpty = require('./isAgeEmpty');
 const isAgeValid = require('./isAgeValid');
+const isTalkValid = require('./isTalkValid');
 
 module.exports = {
   isFieldEmpty,
@@ -24,4 +25,5 @@ module.exports = {
   isNameEmpty,
   isAgeEmpty,
   isAgeValid,
+  isTalkValid,
 };
