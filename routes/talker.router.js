@@ -2,8 +2,6 @@ const express = require('express');
 const useTryCatch = require('../helpers/useTryCatch');
 const {
   isTalkerEmpty,
-  getAllTalkers,
-  getTalkerById,
   isTokenValid,
   isTokenEmpty,
   isNameValid,
@@ -11,11 +9,15 @@ const {
   isAgeEmpty,
   isAgeValid,
   isTalkValid,
-  createTalker,
   isTalkEmpty,
   isRateEmpty,
   isWatchedAtEmpty,
 } = require('../middlewares');
+const {
+  getAllTalkers,
+  getTalkerById,
+  createTalker,
+} = require('../controllers');
 
 const router = express.Router();
 

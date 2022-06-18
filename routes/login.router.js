@@ -5,7 +5,7 @@ const {
   isValidEmail,
   isValidPassword,
 } = require('../middlewares');
-const login = require('../controllers/login');
+const { login } = require('../controllers');
 
 const router = express.Router();
 
