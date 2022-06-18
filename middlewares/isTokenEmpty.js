@@ -1,10 +1,10 @@
-const { unauthorized } = require('../schemas/loginValidations');
+const { notFoundToken } = require('../schemas/talkerValidations');
 const isEmpty = require('../service/isEmpty');
 
 const isTokenEmpty = (req, res, next) => {
   const { authorization } = req.headers;
 
-  if (isEmpty(authorization)) return res(unauthorized.error.code).json(unauthorized.error);
+  if (isEmpty(authorization)) return res.status(notFoundToken.error.code).json(notFoundToken.error);
 
   next();
 };
