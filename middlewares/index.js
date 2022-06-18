@@ -11,6 +11,10 @@ const isNameEmpty = require('./isNameEmpty');
 const isAgeEmpty = require('./isAgeEmpty');
 const isAgeValid = require('./isAgeValid');
 const isTalkValid = require('./isTalkValid');
+const createTalker = require('./createTalker');
+const isTalkEmpty = require('./isTalkEmpty');
+const isRateEmpty = require('./isRateEmpty');
+const isWatchedAtEmpty = require('./isWatchedAtEmpty');
 
 module.exports = {
   isFieldEmpty,
@@ -26,4 +30,8 @@ module.exports = {
   isAgeEmpty,
   isAgeValid,
   isTalkValid,
+  createTalker,
+  isTalkEmpty,
+  isRateEmpty,
+  isWatchedAtEmpty,
 };

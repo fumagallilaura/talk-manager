@@ -9,9 +9,11 @@ const errorMessages = {
   invalidName: 'O "name" deve ter pelo menos 3 caracteres',
   invalidAge: 'A pessoa palestrante deve ser maior de idade',
   ageIsEmpty: requiredField('age'),
-  invalidTalk: 'O campo "talk" é obrigatório e "watchedAt" e "rate" não podem ser vazios',
   invalidWatchedAt: 'O campo "watchedAt" deve ter o formato "dd/mm/aaaa"',
   invalidRate: 'O campo "rate" deve ser um inteiro de 1 à 5',
+  talkIsEmpty: requiredField('talk'),
+  rateIsEmpty: requiredField('rate'),
+  watchedAtIsEmpty: requiredField('watchedAt'),
 };
 
 const errorObjects = {
@@ -40,10 +42,19 @@ const errorObjects = {
     error: { code: httpCodes.BAD_REQUEST, message: errorMessages.invalidTalk },
   },
   invalidRate: {
-    error: { code: httpCodes.UNAUTHORIZED, message: errorMessages.invalidRate },
+    error: { code: httpCodes.BAD_REQUEST, message: errorMessages.invalidRate },
   },
   invalidWatchedAt: {
-    error: { code: httpCodes.UNAUTHORIZED, message: errorMessages.invalidWatchedAt },
+    error: { code: httpCodes.BAD_REQUEST, message: errorMessages.invalidWatchedAt },
+  },
+  talkIsEmpty: {
+    error: { code: httpCodes.BAD_REQUEST, message: errorMessages.talkIsEmpty },
+  },
+  rateIsEmpty: {
+    error: { code: httpCodes.BAD_REQUEST, message: errorMessages.rateIsEmpty },
+  },
+  watchedAtIsEmpty: {
+    error: { code: httpCodes.BAD_REQUEST, message: errorMessages.watchedAtIsEmpty },
   },
 };
 
