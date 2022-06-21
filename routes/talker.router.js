@@ -19,6 +19,7 @@ const {
   getTalkerById,
   createTalker,
   updateTalker,
+  deleteTalker,
 } = require('../controllers');
 
 const router = express.Router();
@@ -40,6 +41,6 @@ router
     talkerExist, updateTalker)
   .delete('/:id(\\d+)', useTryCatch,
     isTokenEmpty, isTokenValid,
-    talkerExist);
+    talkerExist, deleteTalker);
 
 module.exports = router;
