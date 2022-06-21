@@ -17,6 +17,7 @@ const {
   getAllTalkers,
   getTalkerById,
   createTalker,
+  updateTalker,
 } = require('../controllers');
 
 const router = express.Router();
@@ -29,6 +30,12 @@ router
     isNameEmpty, isNameValid,
     isAgeEmpty, isAgeValid,
     isTalkEmpty, isRateEmpty, isWatchedAtEmpty, isTalkValid,
-    createTalker);
+    createTalker)
+  .put('/:id(\\d+)', useTryCatch,
+    isTokenEmpty, isTalkValid,
+    isNameEmpty, isNameValid,
+    isAgeEmpty, isAgeValid,
+    isTalkEmpty, isWatchedAtEmpty, isRateEmpty, isTalkValid,
+    updateTalker);
 
 module.exports = router;
