@@ -12,6 +12,7 @@ const isTalkValid = require('./isTalkValid');
 const isTalkEmpty = require('./isTalkEmpty');
 const isRateEmpty = require('./isRateEmpty');
 const isWatchedAtEmpty = require('./isWatchedAtEmpty');
+const existTalker = require('./existTalker');
 
 module.exports = {
   isFieldEmpty,
@@ -28,4 +29,5 @@ module.exports = {
   isTalkEmpty,
   isRateEmpty,
   isWatchedAtEmpty,
+  existTalker,
 };

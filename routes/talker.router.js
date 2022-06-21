@@ -12,6 +12,7 @@ const {
   isTalkEmpty,
   isRateEmpty,
   isWatchedAtEmpty,
+  existTalker,
 } = require('../middlewares');
 const {
   getAllTalkers,
@@ -36,6 +37,6 @@ router
     isNameEmpty, isNameValid,
     isAgeEmpty, isAgeValid,
     isTalkEmpty, isWatchedAtEmpty, isRateEmpty, isTalkValid,
-    updateTalker);
+    existTalker, updateTalker);
 
 module.exports = router;
