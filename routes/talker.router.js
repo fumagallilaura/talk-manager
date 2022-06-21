@@ -42,5 +42,7 @@ router
   .delete('/:id(\\d+)', useTryCatch,
     isTokenEmpty, isTokenValid,
     talkerExist, deleteTalker);
+  // .get('/talker/search?q=searchTerm', useTryCatch,
+  //   isTokenEmpty, isTokenValid);
 
 module.exports = router;
