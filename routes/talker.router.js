@@ -12,7 +12,7 @@ const {
   isTalkEmpty,
   isRateEmpty,
   isWatchedAtEmpty,
-  existTalker,
+  talkerExist,
 } = require('../middlewares');
 const {
   getAllTalkers,
@@ -37,6 +37,9 @@ router
     isNameEmpty, isNameValid,
     isAgeEmpty, isAgeValid,
     isTalkEmpty, isWatchedAtEmpty, isRateEmpty, isTalkValid,
-    existTalker, updateTalker);
+    talkerExist, updateTalker)
+  .delete('/:id(\\d+)', useTryCatch,
+    isTokenEmpty, isTokenValid,
+    talkerExist);
 
 module.exports = router;
