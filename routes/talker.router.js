@@ -32,7 +32,7 @@ router
     isTalkEmpty, isRateEmpty, isWatchedAtEmpty, isTalkValid,
     createTalker)
   .put('/:id(\\d+)', useTryCatch,
-    isTokenEmpty, isTalkValid,
+    isTokenEmpty, isTokenValid,
     isNameEmpty, isNameValid,
     isAgeEmpty, isAgeValid,
     isTalkEmpty, isWatchedAtEmpty, isRateEmpty, isTalkValid,

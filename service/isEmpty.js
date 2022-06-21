@@ -1,3 +1,3 @@
-const isEmpty = (field) => !field || field === '';
+const isEmpty = (field) => field === undefined || field === '';
 
 module.exports = isEmpty;
