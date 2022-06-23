@@ -13,6 +13,7 @@ const {
   isRateEmpty,
   isWatchedAtEmpty,
   talkerExist,
+  isQueryEmpty,
 } = require('../middlewares');
 const {
   getAllTalkers,
@@ -20,6 +21,7 @@ const {
   createTalker,
   updateTalker,
   deleteTalker,
+  existSearchTerm,
 } = require('../controllers');
 
 const router = express.Router();
@@ -41,8 +43,9 @@ router
     talkerExist, updateTalker)
   .delete('/:id(\\d+)', useTryCatch,
     isTokenEmpty, isTokenValid,
-    talkerExist, deleteTalker);
-  // .get('/talker/search?q=searchTerm', useTryCatch,
-  //   isTokenEmpty, isTokenValid);
+    talkerExist, deleteTalker)
+  .get('/search', useTryCatch,
+    isTokenEmpty, isTokenValid,
+    isQueryEmpty, existSearchTerm);
 
 module.exports = router;

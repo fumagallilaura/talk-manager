@@ -14,7 +14,6 @@ const errorMessages = {
   talkIsEmpty: requiredField('talk'),
   rateIsEmpty: requiredField('rate'),
   watchedAtIsEmpty: requiredField('watchedAt'),
-  talkerNoExist: 'Palestrante não encontrado',
 };
 
 const errorObjects = {
@@ -56,9 +55,6 @@ const errorObjects = {
   },
   watchedAtIsEmpty: {
     error: { code: httpCodes.BAD_REQUEST, message: errorMessages.watchedAtIsEmpty },
-  },
-  talkerNoExist: {
-    error: { code: httpCodes.NOT_FOUND, message: errorMessages.talkerNoExist },
   },
 };
 
