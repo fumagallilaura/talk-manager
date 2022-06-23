@@ -14,7 +14,6 @@ const isRateEmpty = require('./isRateEmpty');
 const isWatchedAtEmpty = require('./isWatchedAtEmpty');
 const talkerExist = require('./talkerExist');
 const isQueryEmpty = require('./isQueryEmpty');
-const tokenValidations = require('./tokenValidations');
 
 module.exports = {
   isFieldEmpty,
@@ -33,5 +32,4 @@ module.exports = {
   isWatchedAtEmpty,
   talkerExist,
   isQueryEmpty,
-  tokenValidations,
 };
